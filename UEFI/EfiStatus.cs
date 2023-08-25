@@ -1,6 +1,8 @@
+using System.Runtime.InteropServices;
 
 namespace EfiNet.UEFI;
 
+[StructLayout(LayoutKind.Sequential)]
 public enum EfiStatus : uint
 {
     EFI_SUCCESS = 0,

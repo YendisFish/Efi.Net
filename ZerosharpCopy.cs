@@ -1,3 +1,6 @@
+using System;
+using System.Runtime.InteropServices;
+
 #region A couple very basic things
 namespace System
 {
@@ -9,6 +12,23 @@ namespace System
 #pragma warning restore 169
     }
     public struct Void { }
+
+    // The layout of primitive types is special cased because it would be recursive.
+    // These really don't need any fields to work.
+    public struct Boolean { }
+    public struct Char { }
+    public struct SByte { }
+    public struct Byte { }
+    public struct Int16 { }
+    public struct UInt16 { }
+    public struct Int32 { }
+    public struct UInt32 { }
+    public struct Int64 { }
+    public struct UInt64 { }
+    public struct IntPtr { }
+    public struct UIntPtr { }
+    public struct Single { }
+    public struct Double { }
 
     public abstract class ValueType { }
     public abstract class Enum : ValueType { }

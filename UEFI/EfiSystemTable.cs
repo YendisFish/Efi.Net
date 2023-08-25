@@ -1,7 +1,9 @@
 using System;
+using System.Runtime.InteropServices;
 
 namespace EfiNet.UEFI;
 
+[StructLayout(LayoutKind.Sequential)]
 public unsafe struct EfiSystemTable
 {
     public EfiTableHeader header;

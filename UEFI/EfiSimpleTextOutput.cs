@@ -1,7 +1,9 @@
 using System;
+using System.Runtime.InteropServices;
 
 namespace EfiNet.UEFI;
 
+[StructLayout(LayoutKind.Sequential)]
 public unsafe struct EfiSimpleTextOutput
 {
     public delegate* unmanaged<EfiSimpleTextOutput*, EfiStatus> Reset;
@@ -10,6 +12,7 @@ public unsafe struct EfiSimpleTextOutput
     public EfiSimpleTxtInputMode *mode;
 }
 
+[StructLayout(LayoutKind.Sequential)]
 public struct EfiSimpleTxtInputMode
 {
     public Integer maxMode;
