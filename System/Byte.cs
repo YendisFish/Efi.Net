@@ -1,21 +1,21 @@
 namespace System;
 
-public unsafe struct UByte
+public unsafe struct Bte
 {
     private fixed byte dat[1];
 
-    private UByte(byte x)
+    private Bte(byte x)
     {
         byte *ptr = &x;
         dat[0] = *ptr;
     }
 
-    public static implicit operator UByte(byte x)
+    public static implicit operator Bte(byte x)
     {
-        return new UByte(x);
+        return new Bte(x);
     }
 
-    public static implicit operator byte(UByte x)
+    public static implicit operator byte(Bte x)
     {
         return *x.dat;
     }
