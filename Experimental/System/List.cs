@@ -31,8 +31,6 @@ public unsafe struct List<T> where T: unmanaged
     public List(KernelCallHost _hostFuncs)
     {
         this.hostFuncs = _hostFuncs;
-
-        ptr = this.hostFuncs.Alloc<T>(sizeof(T));
         Length = 0;
     }
 
