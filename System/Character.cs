@@ -4,6 +4,8 @@ public unsafe struct Character
 {
     private fixed byte dat[1];
 
+    public static Character Empty => new('\0');
+
     private Character(char x)
     {
         byte *ptr = (byte *)&x;

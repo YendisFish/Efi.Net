@@ -9,6 +9,7 @@ public unsafe struct EfiSimpleTextOutput
     public delegate* unmanaged<EfiSimpleTextOutput*, EfiStatus> Reset;
     public delegate* unmanaged<EfiSimpleTextOutput *, Character *, EfiStatus> OutputString;
     public delegate* unmanaged<EfiSimpleTextOutput *, EfiInputKey *, EfiStatus> QueryKey;
+     public delegate* unmanaged<EfiSimpleTextOutput*, UInteger, UInteger, EfiStatus> SetCursorPosition;
     public EfiSimpleTxtInputMode *mode;
 }
 
